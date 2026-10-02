@@ -1,2 +1,3 @@
 app: simple-api
 ssmPrefix: /clusters
+envFilesPrefix: .env
