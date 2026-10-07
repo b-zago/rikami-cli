@@ -26,18 +26,18 @@ func main() {
 		log.Fatalf("Error parsing rikami.yml. %q", err)
 	}
 
-	command := os.Args[1]
-
 	if len(os.Args) < 2 {
-		fmt.Print("You need to provide a Command")
+		fmt.Println("You need to provide a Command")
 		os.Exit(2)
 	}
+
+	command := os.Args[1]
 
 	switch command {
 	case "params":
 
 		if len(os.Args) < 3 {
-			fmt.Print("You need to provide a SubCommand")
+			fmt.Println("You need to provide a SubCommand")
 			os.Exit(2)
 		}
 		subCommand := os.Args[2]

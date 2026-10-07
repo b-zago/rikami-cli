@@ -12,7 +12,7 @@ func (c *Config) Params(subCommand string) {
 	switch subCommand {
 	case "get":
 		if len(os.Args) < 4 {
-			fmt.Print("You need to provide a Path")
+			fmt.Println("You need to provide a Path")
 			os.Exit(2)
 		}
 		path := os.Args[3]
@@ -25,11 +25,11 @@ func (c *Config) Params(subCommand string) {
 		// just get params as json wit optional flag to make output .env-like
 	case "put":
 		if len(os.Args) < 4 {
-			fmt.Print("You need to provide an EnvPath")
+			fmt.Println("You need to provide an EnvPath")
 			os.Exit(2)
 		}
 		if len(os.Args) < 5 {
-			fmt.Print("You need to provide a SecretName")
+			fmt.Println("You need to provide a SecretName")
 			os.Exit(2)
 		}
 
